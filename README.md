@@ -48,7 +48,6 @@ Tudo usa a **Web Crypto API** nativa do navegador (`crypto.subtle`), sem bibliot
 
 - **HTML, CSS e JavaScript puro** (sem framework), em um único arquivo
 - **Web Crypto API**: PBKDF2, AES-GCM e `crypto.getRandomValues`
-- **Armazenamento compartilhado e identidade do usuário** do runtime de Artifacts do Claude (`window.claude.use("db")` e `window.claude.use("user")`)
 - **Playwright** para testar os fluxos com um banco simulado
 
 > ⚠️ A senha-mestra **não pode ser recuperada**. Se for esquecida, os dados ficam inacessíveis. É assim que tem que ser.
