@@ -3,7 +3,11 @@
 Gerenciador de senhas para a família, com **criptografia de ponta a ponta feita no próprio navegador**. 
 Criei o Keyra como projeto pessoal para aprender, na prática, como funcionam criptografia, derivação de chaves e controle de acesso, e ao mesmo tempo resolver um problema real: guardar as senhas da casa em um lugar só, de forma segura.
 > **Projeto de estudo.** O código não passou por auditoria de segurança. Use por sua conta e risco e não guarde nada crítico sem entender como ele funciona.
-
+- A diferença entre **guardar um hash** e **derivar uma chave**, e por que um gerenciador de senhas não precisa (nem deve) guardar a senha-mestra.
+- Por que o **salt** e o **número de iterações** do PBKDF2 importam contra ataques de força bruta.
+- Por que o **IV nunca pode se repetir** no AES-GCM, e como o modo autenticado protege contra alteração dos dados.
+- Como pensar em **metadados**: só cifrar a senha não basta se o nome da pessoa ou do site fica exposto.
+- Como separar **autenticação** (quem pode acessar o armazenamento) de **criptografia** (quem consegue ler o conteúdo).
 ---
 
 ## Funcionalidades
@@ -48,14 +52,6 @@ Tudo usa a **Web Crypto API** nativa do navegador (`crypto.subtle`), sem bibliot
 - **Playwright** para testar os fluxos com um banco simulado
 
 > ⚠️ A senha-mestra **não pode ser recuperada**. Se for esquecida, os dados ficam inacessíveis. É assim que tem que ser.
-
-## 📚 O que aprendi
-
-- A diferença entre **guardar um hash** e **derivar uma chave**, e por que um gerenciador de senhas não precisa (nem deve) guardar a senha-mestra.
-- Por que o **salt** e o **número de iterações** do PBKDF2 importam contra ataques de força bruta.
-- Por que o **IV nunca pode se repetir** no AES-GCM, e como o modo autenticado protege contra alteração dos dados.
-- Como pensar em **metadados**: só cifrar a senha não basta se o nome da pessoa ou do site fica exposto.
-- Como separar **autenticação** (quem pode acessar o armazenamento) de **criptografia** (quem consegue ler o conteúdo).
 
 ## Autor
 ## Gabriel Beato
